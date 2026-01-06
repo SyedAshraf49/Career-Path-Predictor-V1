@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error - CareerPath AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #06b6d4;
+            --secondary: #f97316;
+            --danger: #ef4444;
+            --dark: #0c1e2e;
+            --light: #f0fdff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--dark) 0%, #1a4d5e 50%, #2a6575 100%);
+            color: var(--light);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .error-container {
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .error-icon {
+            font-size: 5rem;
+            margin-bottom: 2rem;
+        }
+
+        .error-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--danger), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .error-message {
+            background: rgba(26, 58, 82, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 2px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .error-text {
+            color: rgba(240, 253, 255, 0.8);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .btn-home {
+            background: linear-gradient(135deg, var(--primary), #8b5cf6);
+            color: white;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .btn-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(6, 182, 212, 0.5);
+            color: white;
+        }
+
+        .help-text {
+            margin-top: 2rem;
+            color: rgba(240, 253, 255, 0.6);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-icon">⚠️</div>
+        <h1 class="error-title">Oops! Something Went Wrong</h1>
+        
+        <div class="error-message">
+            <p class="error-text">{{ error if error else "An unexpected error occurred. Please try again." }}</p>
+        </div>
+
+        <a href="/" class="btn-home">🏠 Return to Home</a>
+
+        <div class="help-text">
+            <p>If this problem persists, please try:</p>
+            <ul style="list-style: none; padding: 0;">
+                <li>✓ Refreshing the page</li>
+                <li>✓ Clearing your browser cache</li>
+                <li>✓ Checking your internet connection</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
