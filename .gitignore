@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+career_report_*.pdf
+result.pdf
+.env
+.env.*
+.venv/
+venv/
